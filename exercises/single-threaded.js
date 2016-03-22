@@ -7,7 +7,7 @@ var Project = function (title, link, stack) {
 Project.prototype.describeStack = function() {
   this.stack.forEach(function(framework) {
     console.log(this.title + ' was built with ' + framework);
-  });
+  }.bind(this));
 };
 
 var myTitle = 'Sewing with JavaScript';
@@ -16,6 +16,7 @@ var myStack = ['Backbone', 'Node', 'MongoDB'];
 var sewingWithJS = new Project(myTitle, myLink, myStack);
 
 // What would the following log?
+
 // What binding pattern(s) cause this?
 // How would you modify the .describeStack method to achieve the expected results?
 sewingWithJS.describeStack();
