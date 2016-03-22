@@ -10,9 +10,13 @@ var sixthFloorCounselor = {
 };
 
 // What will the following log?
+  //'Pamela says: Unicornado!'
 // What binding pattern causes this?
+   // Method invocation
 eighthFloorCounselor.say('Unicornado!');
 
 // How would we modify this invocation of .say so that Tara 
 // says 'Velociraptacular!' instead of Pamela?
-eighthFloorCounselor.say('Velociraptacular!');
+eighthFloorCounselor.say.call(sixthFloorCounselor, 'Velociraptacular!');
+
+
