@@ -7,7 +7,7 @@ var Project = function (title, link, stack) {
 Project.prototype.describeStack = function() {
   this.stack.forEach(function(framework) {
     console.log(this.title + ' was built with ' + framework);
-  }.bind(this));
+  }, this);
 };
 
 var myTitle = 'Sewing with JavaScript';
